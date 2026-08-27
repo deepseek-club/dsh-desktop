@@ -12,5 +12,5 @@
         shortcut:
           enabled: true
           shortcutName: 启动 DeepSeekHarness
-          icon: whale-maid
+          icon: whale-black
           description: 一键启动 DeepSeek Harness Web 界面（鲸鱼娘版）

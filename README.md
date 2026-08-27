@@ -56,7 +56,7 @@ dsh plugin --profile web add @dsh-external/dsh-web-launcher
     shortcut:
       enabled: true        # Windows 下自动创建/更新桌面快捷方式
       shortcutName: 启动 DeepSeekHarness   # 快捷方式名（不含 .lnk）
-      icon: whale-maid     # whale-maid（女仆）| whale-shield（盾徽）| 任意 .ico 绝对路径
+      icon: whale-black    # 默认黑鲸鱼 | whale-maid（女仆）| whale-shield（盾徽）| 任意 .ico 绝对路径
       description: 一键启动 DeepSeek Harness Web 界面（鲸鱼娘版）
 ```
 
@@ -82,9 +82,9 @@ dsh plugin --profile web remove @dsh-external/dsh-web-launcher
 
 ## 图标版权
 
-快捷方式使用的鲸鱼娘图标为**衍生美术作品**，来自 [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) 皮肤（`maid-atelier`），许可为 **CC BY-NC-SA 4.0（署名-非商业性使用-相同方式共享）**，**禁止商业使用**。署名链：一创 上善（Pixiv 62155430）→ 二创 ZipZipPipe（Pixiv 18604994）→ 三创 Small-tailqwq。
+- 默认图标 `whale-black.ico`（黑鲸鱼）：仓库维护者自有素材，无额外限制。
+- 备选图标 `whale-maid.ico` / `whale-shield.ico` 为**衍生美术作品**，来自 [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) 皮肤（`maid-atelier`），许可为 **CC BY-NC-SA 4.0（署名-非商业性使用-相同方式共享）**，**禁止商业使用**。署名链：一创 上善（Pixiv 62155430）→ 二创 ZipZipPipe（Pixiv 18604994）→ 三创 Small-tailqwq。
 - 代码部分：MIT
-- 图标部分（`whale-maid.ico` / `whale-shield.ico`）：CC BY-NC-SA 4.0
 - 如不希望图标带非商用限制，可自行替换 `shortcut.icon` 指向你自己的 .ico。
 
 ## 许可
