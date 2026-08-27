@@ -1,0 +1,40 @@
+{
+  "name": "@dsh-external/dsh-web-launcher",
+  "description": "One-click launcher plugin for the DeepSeek Harness Web GUI: auto-opens the browser once the server is ready, and (Windows) auto-creates a desktop shortcut with a custom icon so every install gets a pretty launcher with zero manual steps.",
+  "version": "0.2.0",
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./package.json": "./package.json"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    }
+  },
+  "scripts": {
+    "test": "node --test tests/"
+  },
+  "keywords": [
+    "dsh",
+    "deepseek-harness",
+    "launcher",
+    "web",
+    "browser",
+    "shortcut"
+  ],
+  "license": "MIT",
+  "peerDependencies": {
+    "@deepseek-ai/cordis": "^4.0.1"
+  },
+  "files": [
+    "lib/index.js",
+    "cordis.patch.yml",
+    "launcher.bat",
+    "whale-maid.ico",
+    "whale-shield.ico",
+    "README.md",
+    "LICENSE"
+  ]
+}

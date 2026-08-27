@@ -1,0 +1,16 @@
+# dsh-web-launcher bundle patch: insert the launcher row into the web plugin
+# roster. Install with:
+#   dsh plugin --profile web add <this-package-path-or-npm-name>
+# The row injects the webRuntime service, so it activates only after the web
+# server has bound and the runtime URL is resolvable.
+- insert:
+    - id: web-launcher
+      name: '@dsh-external/dsh-web-launcher'
+      config:
+        enabled: true
+        delayMs: 500
+        shortcut:
+          enabled: true
+          shortcutName: 启动 DeepSeekHarness
+          icon: whale-maid
+          description: 一键启动 DeepSeek Harness Web 界面（鲸鱼娘版）
