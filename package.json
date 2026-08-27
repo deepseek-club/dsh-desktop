@@ -1,7 +1,7 @@
 {
-  "name": "@dsh-external/dsh-web-launcher",
-  "description": "One-click launcher plugin for the DeepSeek Harness Web GUI: auto-opens the browser once the server is ready, and (Windows) auto-creates a desktop shortcut with a custom icon so every install gets a pretty launcher with zero manual steps.",
-  "version": "0.2.1",
+  "name": "@deepseek-club/dsh-desktop",
+  "description": "DSH Desktop — the desktop launcher for DeepSeek Harness: auto-opens the browser once the server is ready, and (Windows) auto-creates a desktop shortcut with a custom icon so every install gets a pretty launcher with zero manual steps.",
+  "version": "0.3.0",
   "type": "module",
   "main": "lib/index.js",
   "exports": {

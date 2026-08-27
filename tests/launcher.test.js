@@ -16,7 +16,7 @@ function mockCtx(port = 3080) {
 }
 
 test('exports the cordis plugin contract', () => {
-  assert.equal(name, 'web-launcher');
+  assert.equal(name, 'dsh-desktop');
   assert.deepEqual(inject, ['webRuntime']);
 });
 

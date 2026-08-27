@@ -1,4 +1,4 @@
-# dsh-web-launcher
+# dsh-desktop
 
 > **DeepSeek Harness 的「桌面启动器」——让 AI 开发工具像普通软件一样，双击图标就能用。**
 
@@ -31,20 +31,20 @@
 ### 方式一：本地路径（最快）
 
 ```sh
-git clone https://github.com/2996966723/dsh-web-launcher.git
-dsh plugin --profile web add ./dsh-web-launcher
+git clone https://github.com/DeepSeek-club/dsh-desktop.git
+dsh plugin --profile web add ./dsh-desktop
 ```
 
 ### 方式二：GitHub 直装（无需克隆，需 pnpm ≥ 9 且 git 可用）
 
 ```sh
-dsh plugin --profile web add 'github:2996966723/dsh-web-launcher'
+dsh plugin --profile web add 'github:DeepSeek-club/dsh-desktop'
 ```
 
 ### 方式三：npm（若已发布）
 
 ```sh
-dsh plugin --profile web add @dsh-external/dsh-web-launcher
+dsh plugin --profile web add @deepseek-club/dsh-desktop
 ```
 
 装完**重启一次 `dsh web`**，之后每次启动服务，浏览器会自动打开 `http://127.0.0.1:3080`。
@@ -54,14 +54,14 @@ dsh plugin --profile web add @dsh-external/dsh-web-launcher
 在 `~/.dsh/profiles/web/cordis.patch.yml` 中按 id 覆盖：
 
 ```yaml
-- id: web-launcher
+- id: dsh-desktop
   config:
     enabled: true          # 设为 false 关闭自动打开浏览器
     delayMs: 500           # 服务就绪后的等待毫秒数
     url: http://127.0.0.1:3080   # 自定义 URL（默认取实际监听端口）
     shortcut:
       enabled: true        # Windows 下自动创建/更新桌面快捷方式
-      shortcutName: 启动 DeepSeekHarness   # 快捷方式名（不含 .lnk）
+      shortcutName: DSH Desktop   # 快捷方式名（不含 .lnk）
       icon: whale-black    # 默认黑鲸鱼 | whale-maid（女仆）| whale-shield（盾徽）| 任意 .ico 绝对路径
       description: 一键启动 DeepSeek Harness Web 界面（鲸鱼娘版）
 ```
@@ -71,10 +71,10 @@ dsh plugin --profile web add @dsh-external/dsh-web-launcher
 ## 卸载
 
 ```sh
-dsh plugin --profile web remove @dsh-external/dsh-web-launcher
+dsh plugin --profile web remove @deepseek-club/dsh-desktop
 ```
 
-> 卸载不会删除已生成的桌面快捷方式；如需移除请手动删除桌面的 `启动 DeepSeekHarness.lnk` 和 `~/.dsh/launchers/` 目录。
+> 卸载不会删除已生成的桌面快捷方式；如需移除请手动删除桌面的 `DSH Desktop.lnk` 和 `~/.dsh/launchers/` 目录。
 
 ## 工作原理
 
@@ -90,7 +90,7 @@ dsh plugin --profile web remove @dsh-external/dsh-web-launcher
 
 插件在 macOS / Linux 只自动开浏览器，不创建桌面快捷方式（Windows 专属）。想同样"双击即用"，可手动创建：
 
-- **macOS**：用 Automator 新建一个"应用程序"（运行 Shell 脚本 `dsh web`），拖到桌面即可；或把 `dsh web` 存为 `启动 DeepSeekHarness.command` 双击运行
+- **macOS**：用 Automator 新建一个"应用程序"（运行 Shell 脚本 `dsh web`），拖到桌面即可；或把 `dsh web` 存为 `DSH Desktop.command` 双击运行
 - **Linux（GNOME/KDE）**：在 `~/.local/share/applications/` 放一个 `.desktop` 文件，`Exec=dsh web`，`Icon` 可指向 `whale-black.png`（仓库内图标为 ico，可用 ImageMagick 转 png）
 
 ## 图标版权
