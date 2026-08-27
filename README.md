@@ -1,8 +1,14 @@
 # dsh-web-launcher
 
-一键启动 DeepSeek Harness Web GUI —— **dsh 插件版**（自动开浏览器 + Windows 自动创建鲸鱼娘桌面快捷方式）＋ **bat 启动脚本**（检查环境 + 启动服务）。
+> **DeepSeek Harness 的「桌面启动器」——让 AI 开发工具像普通软件一样，双击图标就能用。**
 
-让 DeepSeek Harness 的 Web 界面使用体验变成：**双击 → 服务启动 → 浏览器自动打开**。**装完插件，鲸鱼娘快捷方式自动出现在桌面，零手动步骤。**
+一键启动 DeepSeek Harness Web GUI：**双击 → 服务启动 → 浏览器自动打开**。装完插件，桌面快捷方式自动出现，零手动步骤。
+
+## 核心卖点
+
+- **零心智负担**：不用记命令、不用敲路径，双击桌面图标自动搞定一切
+- **开箱即体验**：装完插件，快捷方式自动出现在桌面（Windows 自动创建，含自定义图标）
+- **跨平台可用**：Windows / macOS / Linux 一套插件方案——自动开浏览器全平台一致；桌面快捷方式当前为 Windows 专属（macOS/Linux 可手动添加，见下文）
 
 ## 前置要求（使用者需要）
 
@@ -79,6 +85,13 @@ dsh plugin --profile web remove @dsh-external/dsh-web-launcher
 ## 独立使用 bat（不装插件）
 
 双击 `launcher.bat` 即可：自动检查 `node`/`dsh`（缺失时提示 `npm install -g @deepseek-ai/dsh`）→ 若 3080 已在监听则只开浏览器 → 否则新开服务器窗口并轮询就绪后打开浏览器。关闭 "DeepSeek Harness Server" 窗口即停止服务。
+
+## macOS / Linux 手动添加快捷方式
+
+插件在 macOS / Linux 只自动开浏览器，不创建桌面快捷方式（Windows 专属）。想同样"双击即用"，可手动创建：
+
+- **macOS**：用 Automator 新建一个"应用程序"（运行 Shell 脚本 `dsh web`），拖到桌面即可；或把 `dsh web` 存为 `启动 DeepSeekHarness.command` 双击运行
+- **Linux（GNOME/KDE）**：在 `~/.local/share/applications/` 放一个 `.desktop` 文件，`Exec=dsh web`，`Icon` 可指向 `whale-black.png`（仓库内图标为 ico，可用 ImageMagick 转 png）
 
 ## 图标版权
 
