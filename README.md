@@ -25,14 +25,14 @@
 ### 方式一：本地路径（最快）
 
 ```sh
-git clone https://github.com/<你的用户名>/dsh-web-launcher.git
+git clone https://github.com/2996966723/dsh-web-launcher.git
 dsh plugin --profile web add ./dsh-web-launcher
 ```
 
 ### 方式二：GitHub 直装（无需克隆，需 pnpm ≥ 9 且 git 可用）
 
 ```sh
-dsh plugin --profile web add 'github:<你的用户名>/dsh-web-launcher'
+dsh plugin --profile web add 'github:2996966723/dsh-web-launcher'
 ```
 
 ### 方式三：npm（若已发布）
