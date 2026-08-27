@@ -62,7 +62,7 @@ dsh plugin --profile web add @deepseek-club/dsh-desktop
     shortcut:
       enabled: true        # Windows 下自动创建/更新桌面快捷方式
       shortcutName: DSH Desktop   # 快捷方式名（不含 .lnk）
-      icon: whale-black    # 默认黑鲸鱼 | whale-maid（女仆）| whale-shield（盾徽）| 任意 .ico 绝对路径
+      icon: mascot        # 默认吉祥物 | whale-black（黑鲸鱼）| whale-maid（女仆）| whale-shield（盾徽）| 任意 .ico 绝对路径
       description: 一键启动 DeepSeek Harness Web 界面（鲸鱼娘版）
 ```
 
@@ -93,6 +93,13 @@ dsh plugin --profile web remove @deepseek-club/dsh-desktop
 - **macOS**：用 Automator 新建一个"应用程序"（运行 Shell 脚本 `dsh web`），拖到桌面即可；或把 `dsh web` 存为 `DSH Desktop.command` 双击运行
 - **Linux（GNOME/KDE）**：在 `~/.local/share/applications/` 放一个 `.desktop` 文件，`Exec=dsh web`，`Icon` 可指向 `whale-black.png`（仓库内图标为 ico，可用 ImageMagick 转 png）
 
+
+## 图标版权
+
+- 默认图标 `mascot.ico`（DeepSeek 风格吉祥物）与 `whale-black.ico`（黑鲸鱼）：仓库维护者自有素材，无额外限制。
+- 备选图标 `whale-maid.ico` / `whale-shield.ico` 为**衍生美术作品**，来自 [Small-tailqwq/dsh-deep-whale](https://github.com/Small-tailqwq/dsh-deep-whale) 皮肤（`maid-atelier`），许可为 **CC BY-NC-SA 4.0（署名-非商业性使用-相同方式共享）**，**禁止商业使用**。署名链：一创 上善（Pixiv 62155430）→ 二创 ZipZipPipe（Pixiv 18604994）→ 三创 Small-tailqwq。
+- 代码部分：MIT
+- 如不希望图标带非商用限制，可自行替换 `shortcut.icon` 指向你自己的 .ico。
 
 ## 许可
 

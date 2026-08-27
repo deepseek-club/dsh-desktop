@@ -12,5 +12,5 @@
         shortcut:
           enabled: true
           shortcutName: DSH Desktop
-          icon: whale-black
+          icon: mascot
           description: DSH Desktop — 一键启动 DeepSeek Harness
