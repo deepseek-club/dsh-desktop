@@ -1,6 +1,6 @@
 {
   "name": "@deepseek-club/dsh-desktop",
-  "description": "DSH Desktop 鈥?the desktop launcher for DeepSeek Harness: auto-opens the browser once the server is ready, and (Windows) auto-creates a desktop shortcut with a custom icon so every install gets a pretty launcher with zero manual steps.",
+  "description": "DSH Desktop 閳?the desktop launcher for DeepSeek Harness: auto-opens the browser once the server is ready, and (Windows) auto-creates a desktop shortcut with a custom icon so every install gets a pretty launcher with zero manual steps.",
   "version": "0.3.3",
   "type": "module",
   "main": "lib/index.js",
@@ -13,9 +13,7 @@
       "patch": "./cordis.patch.yml"
     }
   },
-  "scripts": {
-    "test": "node --test tests/"
-  },
+  "scripts": {},
   "keywords": [
     "dsh",
     "deepseek-harness",
@@ -33,9 +31,6 @@
     "cordis.patch.yml",
     "launcher.bat",
     "mascot.ico",
-    "whale-black.ico",
-    "whale-maid.ico",
-    "whale-shield.ico",
     "README.md",
     "LICENSE"
   ]
