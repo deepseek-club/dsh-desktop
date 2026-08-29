@@ -1,7 +1,8 @@
 # dsh-desktop
 
 > **DeepSeek Harness 的桌面启动器——无需 CMD，双击图标即可自动启动 Web 服务并打开浏览器。**
-DSH Desktop 是 DeepSeek Harness 的桌面启动插件。双击图标，即可自动检查运行环境、启动 Web 服务并打开浏览器，像使用普通软件一样简单。
+> 
+**DSH Desktop 是 DeepSeek Harness 的桌面启动插件。双击图标，即可自动检查运行环境、启动 Web 服务并打开浏览器，像使用普通软件一样简单。**
 
 **无需命令行 · 自动检测环境 · 自动启动服务 · 自动打开浏览器**
 
