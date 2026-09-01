@@ -41,7 +41,9 @@ pause
 exit /b 1
 
 :ready
-echo [INFO] Server is ready. dsh web opens the browser automatically.
+echo [INFO] Server is ready.
+echo [INFO] Opening browser...
+start "" "%URL%"
 echo [INFO] Done. The server keeps running in its own window.
 echo [INFO] Close the "DeepSeek Harness Server" window to stop it.
 exit /b 0
