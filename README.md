@@ -1,12 +1,8 @@
 # dsh-desktop
 
-> **DeepSeek Harness 的桌面启动器——无需 CMD，双击图标即可自动启动 Web 服务并打开浏览器。**
-> 
-**DSH Desktop 是 DeepSeek Harness 的桌面启动插件。双击图标，即可自动检查运行环境、启动 Web 服务并打开浏览器，像使用普通软件一样简单。**
+> **DeepSeek Harness 的「桌面启动器」——让 AI 开发工具像普通软件一样，双击图标就能用。**
 
-**无需命令行 · 自动检测环境 · 自动启动服务 · 自动打开浏览器**
-
-Windows 安装后，还会自动创建桌面快捷方式。
+一键启动 DeepSeek Harness Web GUI：**双击 → 服务启动 → 浏览器自动打开**。装完插件，桌面快捷方式自动出现，零手动步骤。
 
 ## 核心卖点
 
@@ -66,8 +62,8 @@ dsh plugin --profile web add @deepseek-club/dsh-desktop
     shortcut:
       enabled: true        # Windows 下自动创建/更新桌面快捷方式
       shortcutName: DSH Desktop   # 快捷方式名（不含 .lnk）
-      icon: mascot        # 默认吉祥物 | 任意 .ico 绝对路径
-      description: 一键启动 DeepSeek Harness Web 界面（默认吉祥物版）
+      icon: mascot        # 包内自带吉祥物图标；也可填任意 .ico 绝对路径
+      description: 一键启动 DeepSeek Harness Web 界面
 ```
 
 快捷方式每次启动都会**重新落盘 bat + 图标并刷新 lnk**，因此更新插件版本后图标自动跟随更新。
@@ -99,8 +95,10 @@ dsh plugin --profile web remove @deepseek-club/dsh-desktop
 
 
 ## 图标版权
-- 图标 `mascot.ico`（DeepSeek 风格吉祥物）：仓库维护者自有素材，无额外限制。
-- 如需其他图标，可自行替换 `shortcut.icon` 指向你自己的 .ico。
+
+- 包内自带图标 `mascot.ico`（DeepSeek 风格吉祥物）：仓库自有素材，无额外限制。
+- 代码部分：MIT
+- 如需自定义图标，可自行把 `shortcut.icon` 指向你自己的 .ico 文件。
 
 ## 许可
 

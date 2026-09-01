@@ -3,11 +3,17 @@
 #   dsh plugin --profile web add <this-package-path-or-npm-name>
 # The row injects the webRuntime service, so it activates only after the web
 # server has bound and the runtime URL is resolvable.
+#
+# FIX (double-open): `enabled: false` disables this plugin's auto-open browser
+# handoff. The official dsh-web-app plugin (web-runtime row) already opens the
+# default browser once on cold start, so leaving auto-open on here opened TWO
+# tabs at every `dsh web` boot. The desktop-shortcut feature below is
+# independent of `enabled` and still runs.
 - insert:
     - id: dsh-desktop
       name: '@deepseek-club/dsh-desktop'
       config:
-        enabled: true
+        enabled: false
         delayMs: 500
         shortcut:
           enabled: true
