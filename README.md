@@ -21,7 +21,7 @@
 
 | 部件 | 说明 |
 |---|---|
-| 本仓库（`package.json` + `cordis.patch.yml` + `lib/`） | **dsh 插件**：① 服务就绪后自动打开浏览器；② Windows 下自动把 `launcher.bat` + 吉祥物图标落盘到 `~/.dsh/launchers/` 并在**桌面创建/更新快捷方式**（后续每次启动自动同步图标，更新插件即更新图标） |
+| 本仓库（`package.json` + `cordis.patch.yml` + `lib/`） | **dsh 插件**：① 服务就绪后自动打开浏览器；② Windows 下自动把 `launcher.bat` + 鲸鱼娘图标落盘到 `~/.dsh/launchers/` 并在**桌面创建/更新快捷方式**（后续每次启动自动同步图标，更新插件即更新图标） |
 | `launcher.bat` | **独立启动脚本**：检查 node/dsh 环境 → 检查 3080 端口 → 未运行则新开服务窗口 → 就绪后打开浏览器（不依赖插件也能用） |
 
 > 二者配合：bat 负责"检查 + 启动服务"，插件负责"自动开浏览器 + 桌面快捷方式"。
@@ -62,8 +62,8 @@ dsh plugin --profile web add @deepseek-club/dsh-desktop
     shortcut:
       enabled: true        # Windows 下自动创建/更新桌面快捷方式
       shortcutName: DSH Desktop   # 快捷方式名（不含 .lnk）
-      icon: mascot        # 包内自带吉祥物图标；也可填任意 .ico 绝对路径
-      description: 一键启动 DeepSeek Harness Web 界面
+      icon: mascot        # 图标名（包内 mascot.ico），或任意 .ico 的绝对路径
+      description: 一键启动 DeepSeek Harness Web 界面（鲸鱼娘版）
 ```
 
 快捷方式每次启动都会**重新落盘 bat + 图标并刷新 lnk**，因此更新插件版本后图标自动跟随更新。
@@ -91,14 +91,14 @@ dsh plugin --profile web remove @deepseek-club/dsh-desktop
 插件在 macOS / Linux 只自动开浏览器，不创建桌面快捷方式（Windows 专属）。想同样"双击即用"，可手动创建：
 
 - **macOS**：用 Automator 新建一个"应用程序"（运行 Shell 脚本 `dsh web`），拖到桌面即可；或把 `dsh web` 存为 `DSH Desktop.command` 双击运行
-- **Linux（GNOME/KDE）**：在 `~/.local/share/applications/` 放一个 `.desktop` 文件，`Exec=dsh web`，`Icon` 可指向 `mascot.png`（仓库内图标为 ico，可用 ImageMagick 转 png）
+- **Linux（GNOME/KDE）**：在 `~/.local/share/applications/` 放一个 `.desktop` 文件，`Exec=dsh web`，`Icon` 可指向 `mascot.ico`（如需 png，可用 ImageMagick 转换）
 
 
 ## 图标版权
 
-- 包内自带图标 `mascot.ico`（DeepSeek 风格吉祥物）：仓库自有素材，无额外限制。
+- 包内只附带一个图标 `mascot.ico`：仓库维护者自有素材，无额外限制。
 - 代码部分：MIT
-- 如需自定义图标，可自行把 `shortcut.icon` 指向你自己的 .ico 文件。
+- 想换图标：把 `shortcut.icon` 指向你自己的 `.ico`，或直接替换包内的 `mascot.ico`。
 
 ## 许可
 
